@@ -2,28 +2,28 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
-      <header class="header">
-        <a class="brand-logo" href="/">
-          <div class="logo">
-            <div class="dots">
-              <div class="first-dot">■</div>
+      <header className="header">
+        <a className="brand-logo" href="/">
+          <div className="logo">
+            <div className="dots">
+              <div className="first-dot">■</div>
               <div>■</div>
               <div>■</div>
               <div>■</div>
             </div>
           </div>
-          <div class="brand-name">
+          <div className="brand-name">
             <p>shophub</p>
           </div>
         </a>
         <nav>
-          <button id="sidebar" class="hamburger-icon">
+          <button id="sidebar" className="hamburger-icon">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fas"
               data-icon="bars"
-              class="svg-inline--fa fa-bars fa-w-14 "
+              className="svg-inline--fa fa-bars fa-w-14 "
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -35,14 +35,14 @@ const Layout = () => {
             </svg>
           </button>
           <div id="overlay"></div>
-          <div class="nav-links">
-            <button class="sidebarCloseButton">
+          <div className="nav-links">
+            <button className="sidebarCloseButton">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fas"
                 data-icon="times"
-                class="svg-inline--fa fa-times fa-w-11 "
+                className="svg-inline--fa fa-times fa-w-11 "
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 352 512"
@@ -53,32 +53,32 @@ const Layout = () => {
                 ></path>
               </svg>
             </button>
-            <a class="nav-link active" href="/" aria-current="page">
+            <a className="nav-link active" href="/" aria-current="page">
               Home
             </a>
-            <a class="nav-link" href="/shop">
+            <a className="nav-link" href="/shop">
               Shop
             </a>
-            <a class="nav-link" href="/blog">
+            <a className="nav-link" href="/blog">
               Blog
             </a>
-            <a class="nav-link" href="/contact">
+            <a className="nav-link" href="/contact">
               Contact
             </a>
-            <a class="nav-link" href="/login">
+            <a className="nav-link" href="/login">
               Login
             </a>
-            <a class="nav-link" href="/signup">
+            <a className="nav-link" href="/signup">
               SignUp
             </a>
-            <a class="nav-link" href="/myaccount">
+            <a className="nav-link" href="/myaccount">
               My Account
             </a>
           </div>
         </nav>
-        <div class="cart">
-          <div class="cart-icon">
-            <a class="cart-button" href="/cart">
+        <div className="cart">
+          <div className="cart-icon">
+            <a className="cart-button" href="/cart">
               <span aria-label="shopping cart" role="img">
                 {" "}
                 <svg
@@ -86,7 +86,7 @@ const Layout = () => {
                   focusable="false"
                   data-prefix="fas"
                   data-icon="shopping-bag"
-                  class="svg-inline--fa fa-shopping-bag fa-w-14 "
+                  className="svg-inline--fa fa-shopping-bag fa-w-14 "
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
