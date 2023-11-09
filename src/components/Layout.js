@@ -1,5 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { removeUserInfo } from "../redux/orebiSlice";
+
 const Layout = () => {
+  const dispatch = useDispatch();
+  const { userInfo } = useSelector((state) => state.orebiReducer);
+
   return (
     <>
       <header className="header">
@@ -65,12 +71,26 @@ const Layout = () => {
             <a className="nav-link" href="/contact">
               Contact
             </a>
-            <a className="nav-link" href="/login">
-              Login
-            </a>
-            <a className="nav-link" href="/signup">
-              SignUp
-            </a>
+                       
+            {userInfo.length === 1 ? (
+              <button
+                className="nav-link "
+                style={{fontSize:'1.8rem', fontWeight:'bold'}}
+                onClick={() => dispatch(removeUserInfo())}
+              >
+
+                Log Out
+              </button>
+            ) : (
+              <>
+                <a className="nav-link" href="/login">
+                  Login
+                </a>
+                <a className="nav-link" href="/signup">
+                  SignUp
+                </a>
+              </>
+            )}
             <a className="nav-link" href="/myaccount">
               My Account
             </a>
@@ -125,15 +145,16 @@ const Layout = () => {
         </div>
       </div>
       <Outlet />
-      <hr/>
+      <hr />
       <div className="container py-5">
-      <div className="row">
-        <div className="col-md-12 text-center">
-          <p className="weight-700"><b>&copy; 2023 . All Rights Reserved | Developed by Mohammad </b></p>
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <p className="weight-700">
+              <b>&copy; 2023 . All Rights Reserved | Developed by Mohammad </b>
+            </p>
+          </div>
         </div>
       </div>
-      </div>
-    
     </>
   );
 };

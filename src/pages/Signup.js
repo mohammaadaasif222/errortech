@@ -16,7 +16,7 @@ function Signup() {
   });
 
   useEffect(()=>{
-    if(userInfo){
+    if(!userInfo.length === 0){
       navigate('/myaccount')
     }
   },[])
